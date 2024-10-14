@@ -1,0 +1,35 @@
+<div class="container" style="color: brown;font-weight: bold;font-size: 18px;font-family: 'Times New Roman', Times, serif; margin-right: 10px;">
+  <h2>Modifier un Ingrédient :</h2>
+  <form>
+      <div class="col-sm-2 col-md-2 col-lg-2">
+          <label>ID Ingrédient</label>
+          <input type="text" [(ngModel)]="currentIngredient.idIngredient" name="idIngredient" class="form-control" readonly>
+      </div>
+      <div class="col-sm-4 col-md-4 col-lg-4">
+          <label>Nom Ingrédient</label>
+          <input type="text" [(ngModel)]="currentIngredient.nomIngredient" name="nomIngredient" class="form-control">
+      </div>
+      <div class="col-sm-2 col-md-2 col-lg-2">
+          <label>Quantité</label>
+          <input type="number" [(ngModel)]="currentIngredient.quantite" name="quantite" class="form-control">
+      </div>
+      <div class="col-sm-4 col-md-4 col-lg-4">
+          <label>Unité de mesure</label>
+          <input type="text" [(ngModel)]="currentIngredient.uniteMesure" name="uniteMesure" class="form-control">
+      </div>
+
+      <div class="col-sm-4 col-md-4 col-lg-4">
+        <label>Recette</label>
+        <select class="form-control form-control-lg" id="idRecette" name="idRecette" [(ngModel)]="updatedRecId">
+            <option *ngFor="let rec of recettes" [value]="rec.idRecette">
+                {{ rec.nomRecette }}
+            </option>
+        </select>
+    </div>
+    
+      <div class="mt-2">
+        <button type="button" (click)="updateIngredient()" class="btn btn-success">Modifier</button>
+    
+    </div>
+  </form>
+</div>
