@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="card shadow mb-4" style="margin-top: 70px;">
+      <div class="card-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>idIngredient</th>
+              <th>nomIngredient</th>
+              <th>quantite</th>
+              <th>uniteMesure</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let ing of ingredients">
+              <td>{{ing.idIngredient}}</td>
+              <td>{{ing.nomIngredient}}</td>
+              <td>{{ing.quantite}}</td>
+              <td>{{ing.uniteMesure}}</td>
+            
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
